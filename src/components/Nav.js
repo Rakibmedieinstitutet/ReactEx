@@ -10,11 +10,12 @@ const Nav= ()=> {
     return (
         <div>
             <li>
-                Home
+                Home 
             </li>
             <li>
-                About me
+                About me 
             </li>
+            
         </div>
     )
 }

@@ -1,6 +1,6 @@
 
 import React, {  Component } from "react";
-
+import Product from "./Product";
 /* import React from "react"
 class ProductList extends React.Component {
 
@@ -14,8 +14,6 @@ const exData = {
 class ProductList extends Component {
    
     //state : hanterar man data inuti component
-
-
     state = {
         productNamn: "Tomt", 
         productPris: 0,
@@ -41,6 +39,8 @@ class ProductList extends Component {
         })
 
     }
+
+
    
     // state deklaration  : state = { stateNamn: " default", flera-andra-state: "Vilken som helst data typer"}
 
@@ -55,9 +55,16 @@ class ProductList extends Component {
         return (
 
             <div >
+            
+            
+
+
              Hello , this is a class component 😊 
              <button onClick={this.updateState.bind(this)}>click me to see update</button>
-              {this.state.productNamn}
+            
+            
+              <Product  namn ={this.state.productNamn} 
+              pris= {this.state.productPris}/>
        
             </div>
         )

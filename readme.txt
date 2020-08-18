@@ -1,11 +1,11 @@
 
-
+cli/react start: 
 * create-react-app appnamn  : när vi installerar create-react-app cli i globalt 
 
 
 * npx create-react-app appnamn : om vi inte har nån cli använder vi den
 
-
+Jsx: 
 man kan använda html i js eller js i html. :Jsx
 
 // const jsx =  <div> inuti html</div> 
@@ -22,7 +22,11 @@ man kan använda html i js eller js i html. :Jsx
 fragement : <>  </>
  const jsx =  (<> <div> this is a jsx </div> <h1> </h1>  </>)
 
+Glöm ej stänga varje element :  till ex:  <br/>  <input  />
+  <br>  <input >  <img src=" " > kommer inte godtas men om man stänger den kommer det funka
+  : till ex:  <br />  <input />  <img src=" " />  kommer att funka
 
+State:
  // state deklaration  : state = { stateNamn: " default", flera-andra-state: "Vilken som helst data typer"}
 
     // state mutation / update state : this.setState( { stateNamn: "nytt värde "}  )
@@ -31,8 +35,19 @@ fragement : <>  </>
 
     //eventNamn = {this.funktionen.bind(this)}
     //onClick= { this.funktionen.bind(this)  }
+//alternative sätt att skriva state
+
+constructor(props){
+           super(props);
+
+           this.state = {
+               stateNamn: ""
+           }
+     }
 
 
+
+Event: 
 //alternative sätt att skriva eventfunktion / funktionen 
 // Då behövs inte använda bind(this)
    /*  updateState = ()=>{
@@ -45,6 +60,12 @@ fragement : <>  </>
     } */
     //egna döpta metod (updateState)
     // du kan döpa vad du vill
+
+
+// event: on  
+// onClick
+// onChange 
+// onSubmit 
 
 
 
