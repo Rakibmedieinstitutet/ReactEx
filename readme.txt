@@ -7,8 +7,10 @@ cli/react start:
 
 Jsx: 
 man kan använda html i js eller js i html. :Jsx
+//const expression= "HEHE"
+// const jsx =  <div> inuti html {expression }</div> 
 
-// const jsx =  <div> inuti html</div> 
+  {  /*   */       }
 
  //  React.createElement( <div>, inuit html)
 
@@ -27,14 +29,14 @@ Glöm ej stänga varje element :  till ex:  <br/>  <input  />
   : till ex:  <br />  <input />  <img src=" " />  kommer att funka
 
 State:
- // state deklaration  : state = { stateNamn: " default", flera-andra-state: "Vilken som helst data typer"}
+     // state deklaration  : state = { stateNamn: " default", flera-andra-state: "Vilken som helst data typer"}
 
     // state mutation / update state : this.setState( { stateNamn: "nytt värde "}  )
 
     // state output / skriva ut state :  this.state.stateNamn
 
     //eventNamn = {this.funktionen.bind(this)}
-    //onClick= { this.funktionen.bind(this)  }
+    //onClick= { this.funktionen.bind(this)}
 //alternative sätt att skriva state
 
 constructor(props){
@@ -96,3 +98,6 @@ klassNamn
 
 
 ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈
+
+
+

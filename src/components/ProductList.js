@@ -1,6 +1,11 @@
 
 import React, {  Component } from "react";
 import Product from "./Product";
+import axios from "axios"; 
+import Test from "../components/Test"
+
+
+
 /* import React from "react"
 class ProductList extends React.Component {
 
@@ -13,10 +18,14 @@ const exData = {
 }
 class ProductList extends Component {
    
+    // constructor ?? 
+    // default värde 
+
     //state : hanterar man data inuti component
     state = {
         productNamn: "Tomt", 
         productPris: 0,
+        dataFromDataSrc:" "
     }
      
 //alternative sätt att skriva eventfunktion / funktionen 
@@ -31,14 +40,34 @@ class ProductList extends Component {
     } */
     //egna döpta metod (updateState)
     // du kan döpa vad du vill
-    updateState(){
+  async updateState(){
         
+       const response=  await axios.get("https://jsonplaceholder.typicode.com/todos")
+
+
+       console.log(response.data)
+      // data src: https://jsonplaceholder.typicode.com/
         this.setState({
             productNamn: exData.name, 
-            productPris: exData.pris
+            productPris: exData.pris,
+            //dataFromDataSrc: response.data
         })
 
+         response.data.map( e=> 
+           this.setState({
+               dataFromDataSrc:e.title,
+
+           }) 
+            ) 
+
+        //console.log( "response från data källan tillagd till state" , 
+       // this.state.dataFromDataSrc)
+
     }
+
+
+    
+    
 
 
    
@@ -57,14 +86,23 @@ class ProductList extends Component {
             <div >
             
             
+            
 
 
              Hello , this is a class component 😊 
-             <button onClick={this.updateState.bind(this)}>click me to see update</button>
+             <button
+             
+             onClick={this.updateState.bind(this)}>click me to see update</button>
             
+         
+                 <Test  data= {this.state.dataFromDataSrc}/>
+
+            
+
+           
             
               <Product  namn ={this.state.productNamn} 
-              pris= {this.state.productPris}/>
+                pris= {this.state.productPris}/>
        
             </div>
         )

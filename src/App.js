@@ -4,6 +4,17 @@ import Nav from "./components/Nav";
 
 import Greeting from "./components/Greeting"
 import ProductList from './components/ProductList';
+import LifeCycleTest from "./components/LifeCycleTest"
+
+//testa node module is not found
+
+
+//npm i axios
+
+// axios.get
+//axios.post
+//axios.put
+//axios.delete
 
 //props
 
@@ -14,9 +25,11 @@ function App() {
     <div className="App">
          hello React 
         
-         <Nav />
+        
+         <LifeCycleTest />
 
-         <ProductList />
+         
+        
     </div>
     </>
   );
